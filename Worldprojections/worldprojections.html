@@ -8,22 +8,49 @@
 <body>
     <h1>In this project I learned how to display images in different projections</h1>
     
-    <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <h2>Explaination</h2>
+    <p>Maps were displayed using QGIS.  The projection data was the medium culture packet by www.naturalearthdata.com.  The different maps were displayed by adjusting the Coordinate Reference System (CRS) in QGIS and then applying the Indicatrix mapper to the various projections to show the distortion of each map. </p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
+    <h3>Uses standard reference ellipsoid model.  Attempts to moderate distortion.  Most distortion is at the poles.  The standard model for most Western Governments.</h3>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>Modified Azimuthal Projection.  Uses a 2:1 Elipse to compensate for any distortion.  </h3>
     <a href=".//maps/54043.png">
     <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
     </a>
-    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
-    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
-    <p></p>
+    <h2>Pseudo Mercator</h2>
+    <h3>Accurate Shape but experiences size distortion.  Straight lines can be drawn on the map that have true navigational azimuths.  Originally designed for magnetic sea navigation.</h3>
+    <a href="./maps/3857.png">
+    <img src="./maps/3857.png" alt="Pseudo Mercartor" width='500px'>
+    </a>
+    <h2>Sphere Winkle</h2>
+    <h3>Modified Azimuthal Projection.  Minimizes distortion of Distance, Area, and Direction.  Based off the Aitoff Projection</h3>
+    <a href="./maps/53018.png">
+    <img src="./maps/53018.png" alt="WGS84" width='500px'>
+    </a>
+    <h2>World Cylindrical</h2>
+    <h3>Meridians are mapped to be equally spaced.  Creates North-South Stretching.  Does not Accurately portray area.  There are two tyoes - Mercator and Central Cylindrical</h3>
+    <a href=".//maps/54034.png">
+    <img src="./maps/54034.png" alt="Cylindrical" width='500px'>
+    </a>
+    <h2>North Pole Equadistant</h2>
+    <h3>Flat view of the Earth from the North Pole.  Azimuthal Equadistant Projection.  Distance from the center determines the degree of distortion.  The farther away from the center the greater the distortion.</h3>
+    <a href="./maps/102016.png">
+    <img src="./maps/102016.png" alt="Polar" width='500px'>
+    </a>
+    <h2>Sphere Bonne Werner</h2>
+    <h3>A pseudoconical equal area projection.  Maintains accurate shapes along the central central meridian and the further distance fom the mericidian the greater the distortiion.</h3>
+    <a href="./maps/53024.png">
+    <img src="./maps/53024.png" alt="Bonne Werner" width='500px'>
+    </a>
+    <h2>World Eckert</h2>
+    <h3>This projection uses six pseudocylindrical projections.  Attempts to balance area and distance distortion by by breaking them up into equal and alternating types of distotion.</h3>
+    <a href="./maps/54014.png">
+    <img src="./maps/54014.png" alt="Eckert" width='500px'>
+    </a>
     <h2>Data used for this project</h2>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
 </body>
